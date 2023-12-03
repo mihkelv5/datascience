@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="veevargi_veeproovid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="proovivott" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:integer" name="id"/>
+              <xs:element type="xs:integer" name="veevark_id"/>
+              <xs:element type="xs:string" name="veevark"/>
+              <xs:element type="xs:string" name="proovi_liik"/>
+              <xs:element type="xs:string" name="veeliik"/>
+              <xs:element type="xs:date" name="proovivotu_aeg"/>
+              <xs:element type="xs:string" name="proovivotja_nimi"/>
+              <xs:element type="xs:string" name="proovivotja_amet"/>
+              <xs:element type="xs:string" name="proovivotja_atesteerimistunnistuse_number" minOccurs="0"/>
+              <xs:element type="xs:string" name="proovivotu_eesmark"/>
+              <xs:element type="xs:string" name="proovivotu_metoodika"/>
+              <xs:element type="xs:string" name="proovivotuprotokolli_number"/>
+              <xs:element name="proovivotukoht">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:integer" name="id"/>
+                    <xs:element type="xs:string" name="nimetus"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="katseprotokollid">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="katseprotokoll" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="kaaskirja_number"/>
+                          <xs:element type="xs:string" name="katseprotokolli_number"/>
+                          <xs:element type="xs:string" name="hinnang"/>
+                          <xs:element name="naitajad">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="naitaja" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:integer" name="id"/>
+                                      <xs:element type="xs:string" name="nimetus"/>
+                                      <xs:element type="xs:string" name="sisaldus"/>
+                                      <xs:element type="xs:string" name="yhik"/>
+                                      <xs:element type="xs:string" name="hinnang"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
